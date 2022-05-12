@@ -1,3 +1,4 @@
+<%@page import="com.project.shopping.cart.connection.DbCon"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,6 +9,7 @@
     <body>
         <%@include file="includes/navbar.jsp" %>
 
+        <% out.print(DbCon.getConnection());%>
 
         <%@include file="includes/footer.jsp" %>
     </body>
