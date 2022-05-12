@@ -11,11 +11,11 @@ public class DbCon {
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
 
         if (connection == null) {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             String dbURL = "jdbc:mysql://localhost:3306/ecommerce_cart?characterEncoding=utf-8";
             connection = DriverManager.getConnection(dbURL, "root", "iloveaey");
 
-            System.out.println("Connect");
+//            System.out.println("Connect");
         }
 
         return connection;

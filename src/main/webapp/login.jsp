@@ -11,7 +11,7 @@
             <div class="card w-50 mx-auto my-5">
                 <div class="card-header text-center">User Login</div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="user-login" method="POST">
 
                         <div class="form-group">
                             <label>Email Address</label>
