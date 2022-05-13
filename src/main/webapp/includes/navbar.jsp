@@ -13,15 +13,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="cart.jsp">Cart</a>
                 </li>
+                <%
+                    if (auth != null) { %>
                 <li class="nav-item">
                     <a class="nav-link" href="orders.jsp">Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="log-out">Logout</a>
                 </li>
+                <%    } else { %>
                 <li class="nav-item">
                     <a class="nav-link" href="login.jsp">Login</a>
                 </li>
+                <%   }
+                %>
+
+
             </ul>
         </div>
     </div>

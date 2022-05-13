@@ -1,4 +1,12 @@
+<%@page import="com.project.shopping.cart.model.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    User auth = (User) request.getSession().getAttribute("auth");
+    if (auth != null) {
+        request.setAttribute("auth", auth);
+        response.sendRedirect("index.jsp");
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
