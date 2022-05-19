@@ -35,7 +35,7 @@
                             <h6 class="price">Price: <%= p.getPrice()%> ฿</h6>
                             <h6 class="category">Category: <%= p.getCategory()%></h6>
                             <div class="mt-3 d-flex justify-content-between">
-                                <a href="#" class="btn btn-dark">Add to Cart</a>
+                                <a href="add-to-cart?id=<%= p.getId()%>" class="btn btn-dark">Add to Cart</a>
                                 <a href="#" class="btn btn-primary">Buy Now</a>
                             </div>
 
