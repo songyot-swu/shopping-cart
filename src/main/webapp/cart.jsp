@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="com.project.shopping.cart.dao.ProductDao"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
@@ -17,7 +18,9 @@
 
         ProductDao pDao = new ProductDao(DbCon.getConnection());
         cartProduct = pDao.getCartProducts(cart_list);
+        double total = pDao.getTotalCartPrice(cart_list);
         request.setAttribute("cart_list", cart_list);
+        request.setAttribute("total", total);
     }
 %>
 <!DOCTYPE html>
@@ -39,7 +42,7 @@
         <%@include file="includes/navbar.jsp" %>
 
         <div class="container">
-            <div class="d-flex py-3"><h3>Total Price : 500 ฿</h3><a class="mx-3 btn btn-primary" href="#">Check Out</a></div>
+            <div class="d-flex py-3"><h3>Total Price : ${ (total>0)?total:0 } ฿</h3><a class="mx-3 btn btn-primary" href="#">Check Out</a></div>
             <table class="table table-loght">
                 <thead>
                     <tr>
@@ -61,9 +64,9 @@
                             <form action="" method="POST" class="form-inline">
                                 <input type="hidden" name="id" value="<%= c.getId()%>" class="form-input">
                                 <div class="form-group d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-decre" href="#"><i class="fas fa-minus-square"></i></a>
-                                    <input type="text" name="quantity" class="form-control" value="1" readonly>
-                                    <a class="btn btn-sm btn-incre" href="#"><i class="fas fa-plus-square"></i></a>
+                                    <a class="btn btn-sm btn-decre" href="quantity-Inc-dec?action=dec&id=<%= c.getId()%>"><i class="fas fa-minus-square"></i></a>
+                                    <input type="text" name="quantity" class="form-control" value="<%= c.getQuantity()%>" readonly>
+                                    <a class="btn btn-sm btn-incre" href="quantity-Inc-dec?action=inc&id=<%= c.getId()%>"><i class="fas fa-plus-square"></i></a>
                                 </div>
                             </form>
                         </td>

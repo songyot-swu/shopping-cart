@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="com.project.shopping.cart.dao.ProductDao"%>
 <%@page import="com.project.shopping.cart.model.*"%>
@@ -11,6 +12,13 @@
 
     ProductDao pd = new ProductDao(DbCon.getConnection());
     List<Product> products = pd.getAllProducts();
+
+    ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart_list");
+
+    if (cart_list != null) {
+
+        request.setAttribute("cart_list", cart_list);
+    }
 %>
 <!DOCTYPE html>
 <html>

@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.project.shopping.cart.model.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -5,6 +6,13 @@
     if (auth != null) {
         request.setAttribute("auth", auth);
         response.sendRedirect("index.jsp");
+    }
+
+    ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart_list");
+
+    if (cart_list != null) {
+
+        request.setAttribute("cart_list", cart_list);
     }
 %>
 <!DOCTYPE html>
