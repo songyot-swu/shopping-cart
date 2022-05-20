@@ -1,4 +1,8 @@
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/model/User.java
+/Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/OrderNowServlet.java
+/Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/LoginServlet.java
+/Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/RemoveFromCartServlet.java
+/Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/dao/OrderDao.java
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/LogoutServlet.java
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/AddToCartServlet.java
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/model/Product.java
@@ -6,5 +10,5 @@
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/QuantityIncDecServlet.java
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/model/Cart.java
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/dao/ProductDao.java
-/Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/servlet/LoginServlet.java
+/Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/model/Order.java
 /Users/songyot/Documents/JavaProject/shopping-cart/src/main/java/com/project/shopping/cart/dao/UserDao.java
