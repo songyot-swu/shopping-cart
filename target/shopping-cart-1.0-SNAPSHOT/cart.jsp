@@ -45,7 +45,7 @@
             <div class="d-flex py-3">
                 <h3>Total Price : ${ (total>0)?total:0 } ฿</h3>
                 <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
-            <table class="table table-loght">
+            <table class="table table-light">
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
